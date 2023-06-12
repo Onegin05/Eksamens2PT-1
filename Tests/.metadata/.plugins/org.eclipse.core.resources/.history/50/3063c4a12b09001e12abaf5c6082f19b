@@ -1,0 +1,22 @@
+package Test;
+import java.util.*;
+
+public class Test {
+
+	static void TestaApraksts() {
+		 final String RED    = "\u001B[91m";
+		System.out.println("Viktorīnā ir 10 jautājumi, katram jautājumam ir 4 iespējamās atbildes, bet tikai" + RED + " viena no tām ir pareiza." + RED);
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+
+		TestaApraksts();
+
+	
+	}
+	
+
+}

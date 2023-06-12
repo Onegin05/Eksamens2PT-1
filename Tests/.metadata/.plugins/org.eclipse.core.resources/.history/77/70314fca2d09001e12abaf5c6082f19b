@@ -1,0 +1,25 @@
+package Test;
+import java.util.*;
+
+public class Test {
+
+	static void TestaApraksts() {
+		 
+		System.out.println("TESTS PAR TEMU  <CIKLS AR PRIEKŠNOSACĪJUMU(WHILE)> //n");
+		System.out.println("Testā ir 10 jautājumi, katram jautājumam ir 4 iespējamās atbildes, bet tikai VIENA no tām ir pareiza." );
+		System.out.println("Par katru pareizo atbildi jūs saņemat 1 punktu, kopā varat savākt 10 punktu.");
+		System.out.println("Pēc tam, kad būsiet atbildējis uz visiem 10 jautājumiem, jums tiks parādīts jūsu iegūtais rezultāts, kā arī jautājumi, uz kuriem esat atbildējis \n nepareizi.");
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+
+		TestaApraksts();
+
+	
+	}
+	
+
+}

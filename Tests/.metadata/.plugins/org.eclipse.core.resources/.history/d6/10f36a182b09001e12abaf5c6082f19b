@@ -1,0 +1,20 @@
+package Test;
+import java.util.*;
+
+public class Test {
+
+	static void TestaApraksts() {
+		System.out.println("Testā ir 10 jautājumi.");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		TestaApraksts();
+
+	
+	}
+	
+
+}

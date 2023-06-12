@@ -11,7 +11,7 @@ public class Test {
 				+ " kā arī jautājumi, uz kuriem esat atbildējis  nepareizi\n\n"
 				+ "Testu veica: Artjoms Čebotars\r\n"
 				+ "Grupa: 2PT1\r\n"
-				+ "Uzdevuma veids: Eksāmens");
+				+ "Uzdevuma veids:Eksāmens");
 	
 		
 		
