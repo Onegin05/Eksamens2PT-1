@@ -1,0 +1,29 @@
+package Test;
+import java.util.*;
+
+public class Test {
+
+	static void TestaApraksts() {
+		 
+		System.out.println("TESTS PAR TEMU  <CIKLS AR PRIEKŠNOSACĪJUMU(WHILE)> \n\n"
+				+ " Testā ir 10 jautājumi, katram jautājumam ir 4 iespējamās atbildes, bet tikai VIENA no tām ir pareiza.\n"
+				+ " Pēc tam, kad būsiet atbildējis uz visiem 10 jautājumiem, jums tiks parādīts jūsu iegūtais rezultāts,\n"
+				+ " kā arī jautājumi, uz kuriem esat atbildējis  nepareizi\n\n"
+				+ "Testu veica: Artjoms Čebotars\r\n"
+				+ "Grupa: 2PT1\r\n"
+				+ "Uzdevuma veids: Eksāmens");
+	
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+
+		TestaApraksts();
+
+	
+	}
+	
+
+}
