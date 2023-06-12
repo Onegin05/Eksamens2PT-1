@@ -100,7 +100,7 @@ scan.close();
 		jautajumi.add(new Jautajums("Kuru atslēgas vārdu izmanto, lai izietu no while ciklas, pirms visas iterācijas ir pabeigtas?",
 				new String[] { "break","continue","end","exit"} , 1));
 		//10
-		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while?",
+		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while??",
 				new String[] { "while(bezgalīgs)","while(false)","while(i<=1000)","while(true)"} , 4));
 		
 		return jautajumi;

@@ -6,6 +6,7 @@ public class Test {
 	Scanner scan = new Scanner(System.in);
 	System.out.println("TESTS PAR TĒMU <WHILE>.\n\n Izvēlieties darbību\n\n1.Testa sākums!\n\n2.Testa apraksts!");
 	 int izvele = scan.nextInt();
+	 do {
 	if (izvele == 1) {
 		SaktPilditTestu();// нужно сделать функцию,которая включает тест
 	}else if(izvele == 2) {
@@ -14,6 +15,7 @@ public class Test {
 		System.out.println("Šādas iespējas nav!");
 	}
 	scan.close();
+	 }while(izvele!=1 && izvele!=2);
 	}
 	public static void ParaditTestaApraksts() {
 		
@@ -100,7 +102,7 @@ scan.close();
 		jautajumi.add(new Jautajums("Kuru atslēgas vārdu izmanto, lai izietu no while ciklas, pirms visas iterācijas ir pabeigtas?",
 				new String[] { "break","continue","end","exit"} , 1));
 		//10
-		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while?",
+		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while??",
 				new String[] { "while(bezgalīgs)","while(false)","while(i<=1000)","while(true)"} , 4));
 		
 		return jautajumi;

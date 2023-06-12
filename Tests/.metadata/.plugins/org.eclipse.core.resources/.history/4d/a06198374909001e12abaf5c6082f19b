@@ -3,9 +3,10 @@ import java.util.*;
 
 public class Test {
 	public static void main(String[] args) {
-	Scanner scan = new Scanner(System.in);
-	System.out.println("TESTS PAR TĒMU <WHILE>.\n\n Izvēlieties darbību\n\n1.Testa sākums!\n\n2.Testa apraksts!");
-	 int izvele = scan.nextInt();
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("");
+	
+	int izvele = scanner.nextInt();
 	if (izvele == 1) {
 		SaktPilditTestu();// нужно сделать функцию,которая включает тест
 	}else if(izvele == 2) {
@@ -13,15 +14,12 @@ public class Test {
 	}else {
 		System.out.println("Šādas iespējas nav!");
 	}
-	scan.close();
+	scanner.close();
+	
 	}
 	public static void ParaditTestaApraksts() {
 		
-		System.out.println("TESTS PAR TĒMU <WHILE>.\r\nTests satur 10 jautājumus,\nkatram jautājumam 4 atbilžu varianti, no kuriem pareizs tikai 1.\r\n"
-				+ "Lietotājs atbild uz katru jautājumu 1 reizi, nesaņemot tūlītēju atbildes novērtējumu.\nBeigās paziņo, cik jautājumi atbildēti pareizi un izdrukā jautājumu sarakstu, uz kuriem atbildēts nepareizi.\r\n"
-				+ "\n\n(Izstrāde notiek programmēšanas valodā Java)\n\nTestu veica\nLiepājas Valsts tehnikuma\nprogrammēšanas 2. kursa students - Artjoms Čebotars.\r\n"
-				+ ""
-				);
+		System.out.println("описание");
 		
 		
 	}
@@ -39,7 +37,7 @@ for ( int i = 0;i <jautajumi.size();i++) {
 	for (int j = 0; j < jautajums.gIespejas().length; j++) {
 		System.out.println((j + 1) + ". " + jautajums.gIespejas()[j]);
 		}
-	System.out.print("Ievadiet izvēlētās atbildu numuru: ");
+	System.out.print("Ievadiet izvēlētās atbildu numuru");
 	int atb = scan.nextInt();
 	
 	if (atb == jautajums.gPareizaAtbilde()) {
@@ -55,7 +53,7 @@ for ( int i = 0;i <jautajumi.size();i++) {
 
 
 System.out.println("Apsveicam, testa jautājumi ir beigušies.");
-System.out.println("Jūs dabujat: " + punkti +" punktus no 10. ");
+System.out.println("Jūs dabujat" + punkti +" punktus no 10. ");
 if(!NePareiziAtbildi.isEmpty()) {
 	System.out.println("Jūs nepareizi atbildējāt uz šādiem jautājumiem: " +NePareiziAtbildi);
 }
@@ -67,7 +65,7 @@ scan.close();
 		
 		
 		//1
-		jautajumi.add(new Jautajums("Kurš operators tiek izmantots,lai palielinātu mainīgā vērtību par 1 while ciklā?",
+		jautajumi.add(new Jautajums("Kurš operators tiek izmantots,lai palielinātu mainīgā vērtību par 1 while cilpā?",
 				new String[] { "+=","++","--","=+"} , 2));
 		//2
 		jautajumi.add(new Jautajums("Kas notiek, ja while cikla nosacījums uzreiz kļūst false?",
@@ -100,7 +98,7 @@ scan.close();
 		jautajumi.add(new Jautajums("Kuru atslēgas vārdu izmanto, lai izietu no while ciklas, pirms visas iterācijas ir pabeigtas?",
 				new String[] { "break","continue","end","exit"} , 1));
 		//10
-		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while?",
+		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while??",
 				new String[] { "while(bezgalīgs)","while(false)","while(i<=1000)","while(true)"} , 4));
 		
 		return jautajumi;
