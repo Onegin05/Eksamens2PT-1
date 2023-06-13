@@ -1,0 +1,150 @@
+package Test;
+import java.util.*;
+
+public class Test {
+	public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	System.out.println("TESTS PAR TĒMU <WHILE>.\n\n Izvēlieties darbību\n\n1.Testa sākums!\n\n2.Testa apraksts!");
+	 int izvele = scan.nextInt();
+	if (izvele == 1) {
+		SaktPilditTestu();// нужно сделать функцию,которая включает тест
+	}else if(izvele == 2) {
+		ParaditTestaApraksts();// нужно сделать функцию,которая включает описание теста
+	}else {
+		System.out.println("Šādas iespējas nav!");
+	}
+	scan.close();
+	}
+	public static void ParaditTestaApraksts() {
+		
+		System.out.println("TESTS PAR TĒMU <WHILE>.\r\nTests satur 10 jautājumus,\nkatram jautājumam 4 atbilžu varianti, no kuriem pareizs tikai 1.\r\n"
+				+ "Lietotājs atbild uz katru jautājumu 1 reizi, nesaņemot tūlītēju atbildes novērtējumu.\nBeigās paziņo, cik jautājumi atbildēti pareizi un izdrukā jautājumu sarakstu, uz kuriem atbildēts nepareizi.\r\n"
+				+ "\n\n(Izstrāde notiek programmēšanas valodā Java)\n\nTestu veica\nLiepājas Valsts tehnikuma\nprogrammēšanas 2. kursa students - Artjoms Čebotars.\r\n"
+				+ ""
+				);
+		
+		
+	}
+	
+	public static void SaktPilditTestu() {
+		int punkti = 0;
+List<Jautajums> jautajumi =  raditJautajumi();
+Collections.shuffle(jautajumi);
+List<Integer>NePareiziAtbildi = new ArrayList<>();
+
+Scanner scan = new Scanner(System.in);
+for ( int i = 0;i <jautajumi.size();i++) {
+	Jautajums jautajums = jautajumi.get(i);
+	System.out.println("Jautajums "+ ( i + 1) + ": " + jautajums.gTeksts());
+	for (int j = 0; j < jautajums.gIespejas().length; j++) {
+		System.out.println((j + 1) + ". " + jautajums.gIespejas()[j]);
+		}
+	System.out.print("Ievadiet izvēlētās atbildu numuru: ");
+	int atb = scan.nextInt();
+	
+	if (atb == jautajums.gPareizaAtbilde()) {
+		punkti++;
+		
+	}else {
+		NePareiziAtbildi.add(i+1);
+		
+		
+	}
+	
+}
+
+
+System.out.println("Apsveicam, testa jautājumi ir beigušies.");
+System.out.println("Jūs dabujat: " + punkti +" punktus no 10. ");
+if(!NePareiziAtbildi.isEmpty()) {
+	System.out.println("Jūs nepareizi atbildējāt uz šādiem jautājumiem: " +NePareiziAtbildi);
+}
+scan.close();
+	}
+	
+	public static List<Jautajums> raditJautajumi(){
+		List<Jautajums> jautajumi = new ArrayList<>();
+		
+		
+		//1
+		jautajumi.add(new Jautajums("Kurš operators tiek izmantots,lai palielinātu mainīgā vērtību par 1 while ciklā?",
+				new String[] { "+=","++","--","=+"} , 2));
+		//2
+		jautajumi.add(new Jautajums("Kas notiek, ja while cikla nosacījums uzreiz kļūst false?",
+				new String[] { "Cikls nekad netiks izpildīts.","Cikls tiks izpildīts tieši vienu reizi.",
+						"Cikls tiks izpildīts bezgalīgi daudz reižu.","Cikls tiks izpildīts divas reizes."} , 1));
+		//3
+		jautajumi.add(new Jautajums("Kuru operatoru izmanto, lai apvienotu mainīgā vērtību ar citu vērtību while ciklā?",
+				new String[] { "+=","++","--","=+"} , 1));
+		//4
+		jautajumi.add(new Jautajums("Kas notiek, ja while ciklā nosacījums nekad nekļūst nepatiess?",
+				new String[] { "Cikls notiks tieši vienu reizi.","Cikls tiks izpildīts bezgalīgi daudz reižu.","Cikls nekad netiks izpildīts","Cikls tiks izpildīts divas reizes."} , 2));
+		//5
+		jautajumi.add(new Jautajums("Kuru operatoru izmanto, lai ciklā samazinātu mainīgā vērtību par 1?",
+				new String[] { "+=","++","--","=+"} , 3));
+		//6		
+		jautajumi.add(new Jautajums("Kas tiks izvadīts no šāda koda?\n int x = 10;\r\n"
+				+ "while (x > 5) {\r\n"
+				+ "    System.out.println(x);\r\n"
+				+ "    x -= 2;\r\n"
+				+ "}",
+				new String[] { "10, 8, 6, 4","10, 7, 4","5, 3, 1","10, 5"} , 1));
+		//7
+		jautajumi.add(new Jautajums("Kuru simbolu izmanto, lai norādītu koda bloka sākumu un beigas while ciklā?",
+				new String[] { "()","<>","[]","{}"} , 4));
+		//8
+		jautajumi.add(new Jautajums("Iepriekšnosacījumu cikla nosaukums?",
+				new String[] { "do...while","for","while","if"} , 3));
+		//9
+		
+		jautajumi.add(new Jautajums("Kuru atslēgas vārdu izmanto, lai izietu no while ciklas, pirms visas iterācijas ir pabeigtas?",
+				new String[] { "break","continue","end","exit"} , 1));
+		//10
+		jautajumi.add(new Jautajums("Kā izveidot bezgalīgu ciklu, izmantojot while?",
+				new String[] { "while(bezgalīgs)","while(false)","while(i<=1000)","while(true)"} , 4));
+		
+		return jautajumi;
+		
+		
+	}
+	}
+		
+		
+		
+
+
+		
+	class Jautajums{
+		private String teksts;
+		private String[] iespejas;
+		private int PareizaAtbilde;
+		
+		public Jautajums(String teksts,String[] iespejas, int PareizaAtbilde) {
+			this.teksts = teksts;
+			this.iespejas = iespejas;
+			this.PareizaAtbilde = PareizaAtbilde;
+		}
+		public String gTeksts() {
+			return teksts;
+		}
+		public String[] gIespejas() {
+			return iespejas;
+		}
+		public int gPareizaAtbilde() {
+			return PareizaAtbilde;
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+
+
