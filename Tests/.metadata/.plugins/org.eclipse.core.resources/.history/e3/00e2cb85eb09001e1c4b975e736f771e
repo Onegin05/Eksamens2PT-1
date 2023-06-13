@@ -3,12 +3,9 @@ import java.util.*;
 
 public class Test {
 	public static void main(String[] args) {
-		int izvele;
-		Scanner  scan;
-		do {
-	 scan = new Scanner(System.in);
-	System.out.println("TESTS PAR TĒMU <WHILE>.\n\n Izvēlieties darbību\n\n1.Testa sākums!\n\n2.Testa apraksts!\n\n0.Apturēt programmu!");
-	  izvele = scan.nextInt();
+	Scanner scan = new Scanner(System.in);
+	System.out.println("TESTS PAR TĒMU <WHILE>.\n\n Izvēlieties darbību\n\n1.Testa sākums!\n\n2.Testa apraksts!");
+	 int izvele = scan.nextInt();
 	if (izvele == 1) {
 		SaktPilditTestu();// нужно сделать функцию,которая включает тест
 	}else if(izvele == 2) {
@@ -16,7 +13,6 @@ public class Test {
 	}else {
 		System.out.println("Šādas iespējas nav!");
 	}
-		}while(izvele!=0);
 	scan.close();
 	}
 	public static void ParaditTestaApraksts() {
@@ -45,16 +41,13 @@ for ( int i = 0;i <jautajumi.size();i++) {
 		}
 	System.out.print("Ievadiet izvēlētās atbildu numuru: ");
 	int atb = scan.nextInt();
+	
 	if (atb == jautajums.gPareizaAtbilde()) {
 		punkti++;
 		
 	}else {
-		if(atb<1 || atb>4){
-		System.out.println("Tadas opcijas nav!Megiņi vel!");
-		i--;
-		}else{
-			NePareiziAtbildi.add(i+1);
-			}
+		NePareiziAtbildi.add(i+1);
+		
 		
 	}
 	
@@ -117,6 +110,10 @@ scan.close();
 	}
 		
 		
+		
+
+
+		
 	class Jautajums{
 		private String teksts;
 		private String[] iespejas;
@@ -137,7 +134,12 @@ scan.close();
 			return PareizaAtbilde;
 		}
 		
-			
+		
+		
+		
+		
+		
+		
 	}
 	
 	

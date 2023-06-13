@@ -45,11 +45,13 @@ for ( int i = 0;i <jautajumi.size();i++) {
 		}
 	System.out.print("Ievadiet izvēlētās atbildu numuru: ");
 	int atb = scan.nextInt();
+	System.out.println(atb == jautajums.gPareizaAtbilde());
 	if (atb == jautajums.gPareizaAtbilde()) {
 		punkti++;
 		
 	}else {
-		if(atb<1 || atb>4){
+		System.out.println(atb<1 && atb>4);
+		if(atb<1 && atb>4){
 		System.out.println("Tadas opcijas nav!Megiņi vel!");
 		i--;
 		}else{

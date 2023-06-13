@@ -45,16 +45,13 @@ for ( int i = 0;i <jautajumi.size();i++) {
 		}
 	System.out.print("Ievadiet izvēlētās atbildu numuru: ");
 	int atb = scan.nextInt();
+	
 	if (atb == jautajums.gPareizaAtbilde()) {
 		punkti++;
 		
 	}else {
-		if(atb<1 || atb>4){
-		System.out.println("Tadas opcijas nav!Megiņi vel!");
-		i--;
-		}else{
-			NePareiziAtbildi.add(i+1);
-			}
+		NePareiziAtbildi.add(i+1);
+		
 		
 	}
 	
@@ -117,6 +114,10 @@ scan.close();
 	}
 		
 		
+		
+
+
+		
 	class Jautajums{
 		private String teksts;
 		private String[] iespejas;
@@ -137,7 +138,12 @@ scan.close();
 			return PareizaAtbilde;
 		}
 		
-			
+		
+		
+		
+		
+		
+		
 	}
 	
 	
