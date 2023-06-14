@@ -4,4 +4,4 @@ Labdien, šis ir mans eksāmena darbs par tēmu "WHILE" Java.
 un divas diagrammas, proti, "Use Case Diagramm" un "Activity Diagramm".
 
 UZMANIBU!
-Mapē "Ex" ir kods, ko es uzrakstīju ar visiem komentāriem, mapē "Test" ir gatavs kods ar izlabotām kļūdām. Atvainojiet par neērtībām.
+Mapē "Ex" ir kods, ko es uzrakstīju ar visiem komentāriem, mapē "Tests" ir gatavs kods ar izlabotām kļūdām. Atvainojiet par neērtībām.
